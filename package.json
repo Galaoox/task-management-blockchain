@@ -1,0 +1,23 @@
+{
+  "name": "key-cripto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Galaoox/task-management-blockchain.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Galaoox/task-management-blockchain/issues"
+  },
+  "homepage": "https://github.com/Galaoox/task-management-blockchain#readme"
+}
