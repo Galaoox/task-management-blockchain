@@ -1,6 +1,18 @@
 version: "3.4"
 services:
+  frontend:
+    container_name: frontend
+    image: node:16-bullseye-slim
+    working_dir: /home/app
+    command: tail -f /dev/null 
+    volumes: 
+      - ./frontend:/home/app
+    ports:
+      - 3000:3000
+    depends_on:
+      - truffle
   truffle:
+    container_name: truffle
     build:
       context: .
       target: truffle
@@ -9,9 +21,10 @@ services:
     networks:
       - backend
     volumes:
-      - .:/home/app
-      - /home/app/node_modules
+      - ./backend:/home/app
   ganache:
+    container_name: ganache
+    command: ganache -p 8545 -h 0.0.0.0
     build:
       context: .
       target: ganache
